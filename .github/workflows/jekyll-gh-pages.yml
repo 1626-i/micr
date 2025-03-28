@@ -1,0 +1,209 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternal - Luxury Footwear</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Great+Vibes&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+            color: #d3d3d3;
+            text-align: center;
+        }
+
+        header {
+            font-family: 'Great Vibes', cursive;
+            font-size: 50px;
+            font-weight: bold;
+            padding: 25px;
+            color: #c0c0c0;
+            background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+            text-shadow: 3px 3px 15px rgba(192, 192, 192, 0.8);
+            border-bottom: 3px solid #808080;
+        }
+
+        nav {
+            background: rgba(26, 26, 26, 0.9);
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0px 4px 15px rgba(128, 128, 128, 0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #c0c0c0;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background: #808080;
+            color: black;
+            box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.7);
+        }
+
+        .hero {
+            position: relative;
+            background: url('images/hero-banner.jpg') no-repeat center center/cover;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #c0c0c0;
+            font-size: 42px;
+            font-weight: bold;
+            text-shadow: 4px 4px 15px rgba(192, 192, 192, 0.8);
+            border-bottom: 4px solid #808080;
+        }
+
+        section {
+            padding: 60px 10%;
+        }
+
+        h2 {
+            font-size: 34px;
+            color: #c0c0c0;
+            border-bottom: 3px solid #808080;
+            display: inline-block;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .floating-card {
+            background: rgba(26, 26, 26, 0.8);
+            padding: 25px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 12px;
+            box-shadow: 0px 6px 15px rgba(192, 192, 192, 0.5);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            text-align: center;
+        }
+
+        .floating-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0px 12px 30px rgba(75, 0, 130, 0.9);
+        }
+
+        .product-image {
+            width: 250px;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(192, 192, 192, 0.5);
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #c0c0c0;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>Eternal - Luxury Footwear</header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="loadPage('home')">Home</a></li>
+            <li><a href="#" onclick="loadPage('about')">About</a></li>
+            <li><a href="#" onclick="loadPage('products')">Products</a></li>
+            <li><a href="#" onclick="loadPage('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="content"></div>
+
+    <footer>&copy; 2025 Eternal Shoes. All Rights Reserved.</footer>
+
+    <script>
+        function loadPage(pageId) {
+            const content = {
+                home: `
+                    <section class="hero"><p>Step into Luxury with Eternal Shoes</p></section>
+                    <section class="floating-card">
+                        <h2>Welcome to Eternal</h2>
+                        <p>Discover the **perfect blend of comfort, style, and elegance** with our luxury footwear collection.</p>
+                    </section>`,
+
+                about: `
+                    <section class="floating-card">
+                        <h2>About Eternal</h2>
+                        <p>Since 2010, Eternal has been crafting **luxury footwear** that seamlessly blends **tradition, innovation, and sustainability**. Our designs are inspired by timeless elegance and modern comfort.</p>
+                    </section>`,
+
+                products: `
+                    <section>
+                        <h2>Our Products</h2>
+                        <div class="floating-card">
+                            <img src="C:/Users/DELL/Desktop/1626/jec6/s3.png" alt="Luxury Leather Sneakers" class="product-image">
+                            <h3>Luxury Leather Sneakers</h3>
+                            <p>₹4,499 - Experience ultimate comfort with **hand-stitched Italian leather** and breathable soles.</p>
+                        </div>
+                        <div class="floating-card">
+                            <img src="C:/Users/DELL/Desktop/1626/jec6/s2.png" alt="Performance Running Shoes" class="product-image">
+                            <h3>Performance Running Shoes</h3>
+                            <p>₹4,999 - Built for agility with **shock-absorbing technology** and lightweight materials.</p>
+                        </div>
+                        <div class="floating-card">
+                            <img src="C:/Users/DELL/Desktop/1626/jec6/s4.png" alt="Performance Running Shoes" class="product-image">
+                            <h3>Handcrafted Formal Shoes</h3>
+                            <p>₹5,999 - Elevate your style with **premium suede and timeless craftsmanship**.</p>
+                        </div>
+                    </section>`,
+
+                contact: `
+                    <section>
+                        <h2>Contact Us</h2>
+                        <div class="floating-card">
+                            <h3>Customer Support</h3>
+                            <p>Email: support@eternalshoes.com</p>
+                            <p>Phone: +91 3333333333</p>
+                        </div>
+                        <div class="floating-card">
+                            <h3>Business Inquiries</h3>
+                            <p>Email: business@eternalshoes.com</p>
+                            <p>Phone: +91 7777777777</p>
+                        </div>
+                        <div class="floating-card">
+                            <h3>Store Locations</h3>
+                            <p>Mumbai | Delhi | Bangalore | Chennai</p>
+                        </div>
+                    </section>`
+            };
+            document.getElementById("content").innerHTML = content[pageId] || content["home"];
+            window.scrollTo(0, 0);
+        }
+
+        window.onload = function () {
+            loadPage('home');
+        };
+    </script>
+
+</body>
+</html>
+
